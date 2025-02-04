@@ -1,8 +1,13 @@
-if [ "$#" -eq 0 ]; then
-	echo "No arguments supplied"
-	exit 1
-fi
+#!/bin/bash
 
-echo "$1"
-echo "$2"
-echo "$3"
+if [ $# -eq 0 ]; then
+    echo "No arguments supplied"
+else
+    count=0
+    for arg in "$@"; do
+        if [ $count -lt 3 ]; then
+            echo "$arg"
+            count=$((count + 1))
+        fi
+    done
+fi
