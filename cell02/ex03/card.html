@@ -1,31 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="card.css">
-    <title>CSS EX03</title>
+    <title>User Profile Card</title>
+    <link rel="stylesheet" href="./card.css">
 </head>
-<div class="card">
-    <h2>User Profile Card</h2>
-    <div class="image">
-        <img src="https://www.shutterstock.com/image-photo/brazil-wildlife-capybara-hydrochoerus-hydrochaeris-600nw-2120513234.jpg" alt="Avatar">
-    </div>
-    <div class="info">
-        <div class="intra"> waiemsom </div>
-        <div class="description"> Developer, Bangkok </div>
-        <div class="class"> @42Bangkok </div>
-        <div class="social">
-            <img src="https://cdn-icons-png.flaticon.com/256/124/124010.png" alt="facebook_icon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/640px-Instagram_icon.png"
-                alt="instragram_icon">
-            <img src="https://cdn.worldvectorlogo.com/logos/github-icon-2.svg" alt="instragram_icon">
-        </div>
-        <a class="contact" href="https://github.com/TxBlnwza">Contact</a>
-    </div>
-
-</div>
-
 <body>
+    <h1>User Profile Card</h1>
+    <div class="profile-card">
+        <table>
+            <tr>
+                <td class="profile-header">
+                    <img class="profile-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxx-U3y1UsQD8TBhiVxR7wgg7bRttMd0ZMyA&s" alt="Profile Picture" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2 class="infor">waiemsom</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="infor under">hello world</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="infor">@42Bangkok</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="logo_set">
+                        <img class="logo" src="https://www.iconpacks.net/icons/2/free-instagram-logo-icon-3497-thumb.png" alt="">
+                        <img class="logo" src="https://cdn-icons-png.flaticon.com/512/87/87386.png" alt="">
+                        <img class="logo" src="https://img.icons8.com/ios_filled/512/linkedin.png" alt="">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://github.com/TxBlnwza">
+                        <button class="link" type="button">Contact</button>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
+</html>
