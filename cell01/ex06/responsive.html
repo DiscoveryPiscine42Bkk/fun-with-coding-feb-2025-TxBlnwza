@@ -1,36 +1,62 @@
 <!DOCTYPE html>
-<style>
-    body{
+<html>
+  <head>
+    <title>responsive</title>
+    <style>
+      * {
         margin: 0;
-    }
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    table {
-        height: 100vh;
-        width: 100%; 
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        display: flex;
+      }
+
+      table {
+        width: 100%;
+        min-height: 100vh;
         border-collapse: collapse;
-    }
+      }
 
-    th.left {
-        width: 50%; 
-        background-color: rgb(241, 110, 239); 
-        border: 2px solid black; 
-        text-align: left; 
-        border-right-color: gray;
-    }
+      td {
+        border: 1px solid black;
+        padding: 20px;
+        text-align: left;
+        font-size: 1.5rem;
+      }
 
-    th.right {
-        width: 50%; 
-        background-color: rgb(255, 251, 142);
-        border: 2px solid black; 
-        text-align: left; 
-        border-left-color: gray;
-    }
-</style>
-<body>
+      .first {
+        background-color: rgb(105, 253, 36);
+        width: 50%;
+      }
+
+      .second {
+        background-color: rgb(230, 104, 188);
+        width: 50%;
+      }
+
+      @media (max-width: 600px) {
+        table {
+          width: 100%;
+          height: 100%;
+        }
+        td {
+          font-size: 1rem;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <table>
-        <tr>
-            <th class="left">pink</th>
-            <th class="right">yellow</th>
-        </tr>
+      <tr>
+        <td class="first">First cell</td>
+        <td class="second">Second cell</td>
+      </tr>
     </table>
-</body>
+  </body>
+</html>
