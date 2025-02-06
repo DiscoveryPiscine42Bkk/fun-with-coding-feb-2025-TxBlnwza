@@ -1,0 +1,395 @@
+/* ================== รีเซ็ตค่าเริ่มต้น ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================== สไตล์ของ body ================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* ================== Navigation Bar ================== */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #333;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: #555;
+    border-radius: 5px;
+    color: #fff;
+}
+
+/* Hamburger Menu (ซ่อนไว้ในหน้าจอใหญ่) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* ================== Sections ================== */
+section {
+    height: 100vh;
+    padding: 60px 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Section: About Me */
+#about {
+    background: url('https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    display: flex;
+    max-width: 1000px;
+    width: 90%;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    min-height: 400px;
+}
+
+.card-image {
+    flex: 1;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.card-image img {
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.card-content {
+    flex: 2;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-content h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.card-content p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Section: Experience */
+#experience {
+    background: #ddd;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px; /* ลดระยะห่างระหว่างสกิล */
+    margin-top: 20px;
+}
+
+.skill {
+    text-align: center;
+    width: 80px; /* ลดความกว้าง */
+}
+
+.skill-icon {
+    width: 50px; /* ลดขนาดสัญลักษณ์ */
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 10px; /* ลด padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+    transform: scale(1.1);
+}
+
+.skill p {
+    font-size: 14px; /* ลดขนาดตัวหนังสือ */
+    color: #333;
+    margin-top: 8px; /* ลดระยะห่าง */
+    font-weight: bold;
+}
+
+.project {
+    background: white;
+    border-radius: 10px;
+    padding: 15px; /* ลด padding */
+    margin: 20px auto; /* ลดระยะห่าง */
+    max-width: 100%; /* ให้เต็มความกว้าง */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.project h3 {
+    font-size: 18px; /* ลดขนาดหัวข้อ */
+    color: #333;
+    margin-bottom: 8px; /* ลดระยะห่าง */
+}
+
+.tech-stack {
+    font-size: 14px; /* ลดขนาดตัวหนังสือ */
+    color: #666;
+    margin-bottom: 10px; /* ลดระยะห่าง */
+    font-style: italic;
+}
+
+.project-description {
+    font-size: 14px; /* ลดขนาดตัวหนังสือ */
+    color: #444;
+    line-height: 1.5; /* ลดระยะห่างระหว่างบรรทัด */
+}
+#contact {
+    background: #bbb;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-heading {
+    font-size: 48px; /* ขนาดหัวข้อใหญ่ */
+    margin-bottom: 40px; /* ระยะห่างด้านล่าง */
+    color: #222;
+    text-transform: uppercase; /* ทำให้ตัวอักษรเป็นตัวใหญ่ทั้งหมด */
+    font-weight: bold; /* ตัวหนา */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px; /* ระยะห่างระหว่างรายการ */
+    margin-top: 30px;
+}
+
+.contact-item {
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* ระยะห่างระหว่างสัญลักษณ์และข้อความ */
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: scale(1.05); /* ขยายเล็กน้อยเมื่อ hover */
+}
+
+.contact-icon {
+    width: 60px; /* ขนาดสัญลักษณ์ */
+    height: 60px;
+}
+
+.contact-details {
+    text-align: left;
+}
+
+.contact-details h3 {
+    font-size: 24px; /* ขนาดหัวข้อ */
+    margin: 0 0 5px 0;
+    color: #222;
+}
+
+/* ================== Responsive Design (Mobile) ================== */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* แสดง Hamburger Menu */
+    }
+
+    .nav-links {
+        display: none; /* ซ่อนเมนูปกติ */
+        flex-direction: column;
+        width: 100%;
+        background: #444;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* แสดงเมนูเมื่อคลิก Hamburger */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 10px;
+        display: block;
+    }
+    
+    /* ปรับการ์ดใน section About Me */
+    .card {
+        flex-direction: column;
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .card-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .card-image img {
+        max-height: 250px;
+    }
+
+    .card-content {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .card-content h2 {
+        font-size: 24px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+    /* ปรับสกิลใน section Experience */
+    .skills-container {
+        gap: 10px; /* ลดระยะห่างระหว่างสกิล */
+    }
+
+    .skill {
+        width: 70px; /* ลดความกว้าง */
+    }
+
+    .skill-icon {
+        width: 40px; /* ลดขนาดสัญลักษณ์ */
+        height: 40px;
+        padding: 8px; /* ลด padding */
+    }
+
+    .skill p {
+        font-size: 12px; /* ลดขนาดตัวหนังสือ */
+    }
+
+    .project h3 {
+        font-size: 16px; /* ลดขนาดหัวข้อ */
+    }
+
+    .tech-stack {
+        font-size: 12px; /* ลดขนาดตัวหนังสือ */
+    }
+
+    .project-description {
+        font-size: 12px; /* ลดขนาดตัวหนังสือ */
+    }
+    .contact-heading {
+        font-size: 36px; /* ลดขนาดหัวข้อสำหรับมือถือ */
+    }
+
+    .contact-container {
+        gap: 20px; /* ลดระยะห่างสำหรับมือถือ */
+    }
+
+    .contact-item {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .contact-icon {
+        width: 50px; /* ลดขนาดสัญลักษณ์สำหรับมือถือ */
+        height: 50px;
+    }
+
+    .contact-details {
+        text-align: center;
+    }
+
+    .contact-details h3 {
+        font-size: 20px; /* ลดขนาดหัวข้อสำหรับมือถือ */
+    }
+
+    .contact-details p {
+        font-size: 16px; /* ลดขนาดข้อความสำหรับมือถือ */
+    }
+}
