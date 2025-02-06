@@ -152,6 +152,12 @@ section {
     padding: 40px 20px;
     text-align: center;
 }
+#experience h2 {
+    font-size: 48px; /* ปรับขนาดตัวหนังสือ */
+    color: #333; /* สีตัวหนังสือ */ 
+    font-weight: bold; /* ตัวหนา */
+    text-transform: uppercase; /* ตัวใหญ่ทั้งหมด */
+}
 
 .skills-container {
     display: flex;
@@ -220,6 +226,13 @@ section {
     background: #bbb;
     padding: 60px 20px;
     text-align: center;
+}
+#contact h2 {
+    font-size: 48px; /* ปรับขนาดตัวหนังสือ */
+    color: #333; /* สีตัวหนังสือ */
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+    font-weight: bold; /* ตัวหนา */
+    text-transform: uppercase; /* ตัวใหญ่ทั้งหมด */
 }
 
 .contact-heading {
