@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="nguan.css">
+</head>
+<body>
+
+    <nav>
+        <div class="navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#">My Portfolio</a>
+            </div>
+    
+            <!-- Hamburger Menu (สำหรับมือถือ) -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
+            <!-- เมนู -->
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about" class="firstsec">
+        <div class="card">
+            <div class="card-image">
+                <img src="./pic/Me.png" alt="Profile Picture">
+            </div>
+            <div class="card-content">
+                <h2><b>About Me</b></h2>
+                <p>A third-year student pursuing a Dual Degree in
+                    B.Eng. IoT System and Information Engineering and
+                    B.Sc. Industrial Physics at King Mongkut's Institute
+                    of Technology Ladkrabang. Passionate about
+                    gaining hands-on experience in IT-related field
+                    particularly as a Developer, with a strong interest
+                    in front-end development. Dedicated to building a
+                    solid foundation in front-end technologies and
+                    gaining practical experience to enhance skills and
+                    career growth.
+                    </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="skills-container">
+            <!-- สัญลักษณ์ทักษะ (Python, ReactJS, JavaScript, Excel, Word) -->
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python" class="skill-icon">
+                <p>Python</p>
+            </div>
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/1183/1183672.png" alt="ReactJS" class="skill-icon">
+                <p>ReactJS</p>
+            </div>
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" class="skill-icon">
+                <p>JavaScript</p>
+            </div>
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732220.png" alt="Excel" class="skill-icon">
+                <p>Excel</p>
+            </div>
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732222.png" alt="Word" class="skill-icon">
+                <p>Word</p>
+            </div>
+        </div>
+    
+        <!-- เพิ่มโปรเจค Huehiw Marketplace -->
+        <div class="project">
+            <h3>Huehiw Marketplace (Mobile App)</h3>
+            <p class="tech-stack">Using HTML, CSS, JavaScript, React, TypeScript | 2022 - 2023</p>
+            <p class="project-description">
+                Huehiw Marketplace is an online marketplace application developed using CSS,
+                JavaScript, ReactJS, and TypeScript. The application offers key features that enable
+                users to conveniently list items for sale, search for products, and manage their
+                profiles. Its standout functionalities include an intuitive post creation interface,
+                explore page for browsing posts, profile editing, and the ability to like or save posts.
+                Users can also edit and delete their own content as needed.
+            </p>
+        </div>
+    
+        <!-- เพิ่มโปรเจค KhunThongPhu -->
+        <div class="project">
+            <h3>KhunThongPhu</h3>
+            <p class="tech-stack">Thai Language Spam Detector with a Line Bot and Website | 2023 - 2024</p>
+            <p class="project-description">
+                The Thai Language Spam Detector with a Line Bot and Website is a comprehensive project
+                that combines artificial intelligence, web development, and chatbot technology to tackle spam
+                message detection in the Thai language. The project utilizes a custom-trained AI model based
+                on LSTM (Long Short-Term Memory) to classify text as spam or non-spam effectively. The
+                training dataset was meticulously crafted by collecting spam messages, curating non-spam
+                examples, and generating additional data using Python-based scripts.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="contact-heading">Contact</h2>
+        <div class="contact-container">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/wuttipat.aiemsomboonsuk.77" target="_blank" class="contact-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook Icon" class="contact-icon">
+                <div class="contact-details">
+                    <h3>Facebook</h3>
+                    <p>Wuttipat Aiemsomboonsuk</p>
+                </div>
+            </a>
+    
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/wuttipat_nguan/" target="_blank" class="contact-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Icon" class="contact-icon">
+                <div class="contact-details">
+                    <h3>Instagram</h3>
+                    <p>wuttipat_nguan</p>
+                </div>
+            </a>
+    
+            <!-- GitHub -->
+            <a href="https://github.com/TxBlnwza" target="_blank" class="contact-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="contact-icon">
+                <div class="contact-details">
+                    <h3>GitHub</h3>
+                    <p>TxBlnwza</p>
+                </div>
+            </a>
+    
+            <!-- เบอร์โทรศัพท์ -->
+            <div class="contact-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/126/126341.png" alt="Phone Icon" class="contact-icon">
+                <div class="contact-details">
+                    <h3>Phone</h3>
+                    <p>+66 957 630 593</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="nguan.js"></script>
+</body>
+</html>
