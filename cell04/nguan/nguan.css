@@ -79,13 +79,9 @@ nav {
 }
 /* ================== Sections ================== */
 section {
-    height: 100vh;
-    padding: 60px 20px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    min-height: 100vh; /* เปลี่ยนจาก height เป็น min-height */
+    padding: 40px 15px; /* ลด padding */
+    overflow: hidden; /* ป้องกัน content เยิ้ม */
 }
 
 /* Section: About Me */
@@ -261,10 +257,11 @@ section {
     background: white;
     border-radius: 10px;
     padding: 15px; /* ลด padding */
-    margin: 25px auto; /* ลดระยะห่าง */
+    margin: 40px auto; /* ลดระยะห่าง */
     max-width: 90%; /* ให้เต็มความกว้าง */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
+    margin-top :10vh ;
 }
 
 .project h3 {
@@ -288,7 +285,7 @@ section {
 /* ================== Section: Contact ================== */
 #contact {
     background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
-    padding: 60px 20px;
+    padding: 160px 20px;
     color: #333;
 }
 #contact h2 {
@@ -371,6 +368,7 @@ footer p {
 
 /* ================== Responsive Design (Mobile) ================== */
 @media (max-width: 768px) {
+    /* ปรับ Navbar */
     .hamburger {
         display: flex; /* แสดง Hamburger Menu */
     }
@@ -381,9 +379,10 @@ footer p {
         width: 100%;
         background: #444;
         position: absolute;
-        top: 50px;
+        top: 50px; /* ปรับตำแหน่งให้ชิด Navbar */
         left: 0;
         padding: 10px 0;
+        margin: 0; /* ลบ margin ที่อาจทำให้เกิดช่องว่าง */
     }
 
     .nav-links.active {
@@ -400,11 +399,16 @@ footer p {
         padding: 10px;
         display: block;
     }
-    
-    /* ปรับการ์ดใน section About Me */
+
+    /* ปรับ Section: About Me */
     .profile-container {
         flex-direction: column;
-        gap: 30px;
+        gap: 20px;
+    }
+
+    .profile-image img {
+        max-width: 200px;
+        max-height: 200px;
     }
 
     .profile-header {
@@ -422,42 +426,49 @@ footer p {
     .profile-content {
         padding: 20px;
     }
-    /* ปรับสกิลใน section Experience */
+
+    /* ปรับ Section: Experience */
     .skills-container {
-        gap: 10px; /* ลดระยะห่างระหว่างสกิล */
+        gap: 10px;
     }
 
     .skill {
-        width: 70px; /* ลดความกว้าง */
+        width: 70px;
     }
 
     .skill-icon {
-        width: 40px; /* ลดขนาดสัญลักษณ์ */
+        width: 40px;
         height: 40px;
-        padding: 8px; /* ลด padding */
+        padding: 8px;
     }
 
     .skill p {
-        font-size: 12px; /* ลดขนาดตัวหนังสือ */
+        font-size: 12px;
+    }
+
+    .project {
+        padding: 15px;
     }
 
     .project h3 {
-        font-size: 16px; /* ลดขนาดหัวข้อ */
+        font-size: 16px;
     }
 
     .tech-stack {
-        font-size: 12px; /* ลดขนาดตัวหนังสือ */
+        font-size: 12px;
     }
 
     .project-description {
-        font-size: 12px; /* ลดขนาดตัวหนังสือ */
+        font-size: 12px;
     }
+
+    /* ปรับ Section: Contact */
     .contact-heading {
-        font-size: 36px; /* ลดขนาดหัวข้อสำหรับมือถือ */
+        font-size: 36px;
     }
 
     .contact-container {
-        gap: 20px; /* ลดระยะห่างสำหรับมือถือ */
+        gap: 20px;
     }
 
     .contact-item {
@@ -466,7 +477,7 @@ footer p {
     }
 
     .contact-icon {
-        width: 50px; /* ลดขนาดสัญลักษณ์สำหรับมือถือ */
+        width: 50px;
         height: 50px;
     }
 
@@ -475,13 +486,90 @@ footer p {
     }
 
     .contact-details h3 {
-        font-size: 20px; /* ลดขนาดหัวข้อสำหรับมือถือ */
+        font-size: 20px;
     }
 
     .contact-details p {
-        font-size: 16px; /* ลดขนาดข้อความสำหรับมือถือ */
+        font-size: 16px;
     }
+
+    /* ปรับ Footer */
     footer p {
-        font-size: 14px; /* ปรับขนาดตัวหนังสือสำหรับมือถือ */
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* ปรับขนาดตัวหนังสือสำหรับหน้าจอเล็กมาก */
+    .name {
+        font-size: 1.8em !important;
+    }
+
+    .nickname {
+        font-size: 1.3em !important;
+    }
+
+    .profile-content p {
+        font-size: 14px !important;
+        line-height: 1.6;
+    }
+
+    /* ปรับการ์ดโปรไฟล์ */
+    .profile-header {
+        padding: 15px !important;
+    }
+
+    .profile-header::after {
+        bottom: -15px;
+        left: 30px;
+        width: 30px;
+        height: 30px;
+    }
+
+    /* ปรับ Experience Section */
+    .project h3 {
+        font-size: 14px !important;
+    }
+
+    .tech-stack {
+        font-size: 11px !important;
+    }
+
+    .project-description {
+        font-size: 11px !important;
+        line-height: 1.4;
+    }
+
+    /* ปรับ Contact Section */
+    .contact-details h3 {
+        font-size: 18px !important;
+    }
+
+    .contact-details p {
+        font-size: 14px !important;
+    }
+
+    /* ปรับระยะห่างต่างๆ */
+    .profile-container {
+        gap: 15px !important;
+        padding: 10px;
+    }
+
+    .skills-container {
+        gap: 8px !important;
+    }
+
+    .skill {
+        width: 60px !important;
+    }
+
+    .skill-icon {
+        width: 35px !important;
+        height: 35px !important;
+        padding: 6px !important;
+    }
+
+    .skill p {
+        font-size: 10px !important;
     }
 }
