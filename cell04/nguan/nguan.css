@@ -92,56 +92,123 @@ section {
 #about {
     background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
     padding: 60px 20px;
-    color: #333; /* สีตัวหนังสือ */
-}
-
-.card {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
     display: flex;
-    max-width: 1000px;
-    width: 90%;
-    padding: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px;
-    min-height: 400px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* ทำให้ section สูงเต็มหน้าจอ */
 }
 
-.card-image {
-    flex: 1;
-    margin-right: 30px;
+.profile-section {
+    background: #f8f9fa;
+    padding: 80px 20px;
+    min-height: 100vh;
     display: flex;
     align-items: center;
 }
 
-.card-image img {
-    border-radius: 15px;
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+/* ส่วนรูปภาพ */
+.profile-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.profile-image img {
     width: 100%;
     height: auto;
-    max-width: 450px;
-    max-height: 400px;
-    object-fit: cover;
+    border-radius: 15px;
+    border: 5px solid #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease;
 }
 
-.card-content {
-    flex: 2;
+.profile-image img:hover {
+    transform: rotate(0deg) translateY(-10px);
+}
+
+/* ส่วนข้อมูล */
+.profile-info {
+    flex: 1.2;
+}
+
+.profile-header {
+    background: linear-gradient(135deg, #6B48FF, #00A3FF);
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    margin-bottom: 30px;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(107,72,255,0.2);
+}
+
+.profile-header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50px;
+    width: 40px;
+    height: 40px;
+    background: #6B48FF;
+    transform: rotate(45deg);
+}
+
+.name {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.nickname {
+    font-size: 1.8em;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.major {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* ส่วนเนื้อหา */
+.profile-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.profile-content h3 {
     color: #333;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.card-content h2 {
+    font-size: 1.8em;
     margin-bottom: 20px;
-    font-size: 32px;
+    position: relative;
 }
 
-.card-content p {
-    font-size: 18px;
-    line-height: 1.8;
+.profile-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+
 }
 
+.highlight-box {
+    background: #F8F9FF;
+    padding: 20px;
+    border-left: 4px solid #6B48FF;
+    margin-top: 20px;
+    border-radius: 8px;
+}
 /* Section: Experience */
 #experience {
     background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
@@ -335,34 +402,26 @@ footer p {
     }
     
     /* ปรับการ์ดใน section About Me */
-    .card {
+    .profile-container {
         flex-direction: column;
+        gap: 30px;
+    }
+
+    .profile-header {
         padding: 20px;
-        min-height: auto;
     }
 
-    .card-image {
-        margin-right: 0;
-        margin-bottom: 15px;
+    .name {
+        font-size: 2em;
     }
 
-    .card-image img {
-        max-height: 250px;
+    .nickname {
+        font-size: 1.5em;
     }
 
-    .card-content {
-        text-align: center;
-        padding: 10px;
+    .profile-content {
+        padding: 20px;
     }
-
-    .card-content h2 {
-        font-size: 24px;
-    }
-
-    .card-content p {
-        font-size: 14px;
-    }
-
     /* ปรับสกิลใน section Experience */
     .skills-container {
         gap: 10px; /* ลดระยะห่างระหว่างสกิล */
