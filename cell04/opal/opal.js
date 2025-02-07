@@ -1,10 +1,12 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('nav ul li a').forEach(anchor => {
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
-        targetSection.scrollIntoView({ behavior: 'smooth' });
+
+        if (targetSection) {
+            e.preventDefault(); // ป้องกันเฉพาะลิงก์ที่เป็น anchor link (#about, #experience)
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
     });
 });
 // เพิ่มฟังก์ชันเปิด-ปิดเมนู
