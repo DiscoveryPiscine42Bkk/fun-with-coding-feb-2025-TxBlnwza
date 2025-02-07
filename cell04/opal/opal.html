@@ -5,42 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="opal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <!-- Navigation Bar -->
     <nav>
-        <ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul id="nav-menu">
+            <li><a href="../index.html">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+    
 
     <!-- About Me Section -->
     <section id="about">
-        <h2>About Me</h2>
-        <p>A third-year student pursuing a Dual Degree in B.Eng. IoT System and Information Engineering and
-            B.Sc. Industrial Physics at King Mongkut’s Institute of Technology Ladkrabang. Committed to
-            developing skills in application development, web systems, and data analysis. Experienced in working
-            with HTML, CSS, JavaScript, React, Python, and SQL, with practical involvement in real-world
-            projects, including mobile application development and API Server implementation for efficient data
-            management. Strong in teamwork and creative problem-solving, with a dedication to contributing to
-            organizational success.</p>
+        <div class="about-header">
+            <h2>About Me</h2>
+            <div class="name">Natthapak Prampring</div>
+        </div>
+        <div class="about-content">
+            <img src="https://cdn.discordapp.com/attachments/1271553752729649319/1337397290658435193/image.jpg?ex=67a74bc9&is=67a5fa49&hm=51bc6ea8bc0412ef4ae945ec3c5986dbb3a5633e7e46914ec955d20b90e10a89&"  class="profile-img">
+            <div class="about-text">
+                <p>
+                    A third-year student pursuing a Dual Degree in B.Eng. IoT System and Information Engineering and
+                    B.Sc. Industrial Physics at King Mongkut’s Institute of Technology Ladkrabang. Committed to
+                    developing skills in application development, web systems, and data analysis. Experienced in working
+                    with HTML, CSS, JavaScript, React, Python, and SQL, with practical involvement in real-world
+                    projects, including mobile application development and API Server implementation for efficient data
+                    management. Strong in teamwork and creative problem-solving, with a dedication to contributing to
+                    organizational success.
+                </p>
+            </div>
+        </div>
     </section>
 
     <!-- Experience Section -->
     <section id="experience">
-        <h2>Experience</h2>
-        <p>This is where you can detail your experience.</p>
+        <h2 class="section-main-title">Experience</h2>
+        
+        <!-- Tools Section -->
+        <div class="tools-section">
+            <h3 class="subheading">Tools</h3>
+            <div class="tools-grid">
+                <div class="tool-item">
+                    <a href="https://github.com" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+                <div class="tool-item">
+                    <a href="https://www.figma.com" target="_blank">
+                        <i class="fab fa-figma"></i>
+                        <span>Figma</span>
+                    </a>
+                </div>
+                <div class="tool-item">
+                    <a href="https://powerbi.microsoft.com" target="_blank">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Power BI</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="projects-section">
+            <h3 class="subheading">Projects</h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h4>Niau mobile Application</h4>
+                    <p>• Used HTML, CSS, JavaScript, React, PHP, SQL  
+                       • Developed a mobile application using MIT App Inventor to enhance functionality and usability on mobile devices.  
+                        • Developed a lipstick try-on application with features for searching, personalized recommendations, and virtual try-on, helping users make purchase decisions.  
+                        • Demo application: [https://youtu.be/qBLj9w8SIbw?si=0ifjAy0GthGt73N6](https://youtu.be/qBLj9w8SIbw?si=0ifjAy0GthGt73N6)  </p>
+                </div>
+                <div class="project-card">
+                    <h4>Earthquake AI Project</h4>
+                    <p>• Used JavaScript, React.js, HTML, CSS, Python  
+                        • Developed an AI prediction model using Linear Regression.  
+                        • Developed a predictive model for damage levels (intensity and destruction) based on user input.  
+                        • Function for downloading statistical input data entered by users each month.  
+                        • Demo: [https://youtu.be/IP47FxWkbkI?si=_uJqIFoMUsWpYjQC](https://youtu.be/IP47FxWkbkI?si=_uJqIFoMUsWpYjQC)  
+                        • Web application: [https://bit.ly/Earthquake-ai](https://bit.ly/Earthquake-ai)  </p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
-        <p>This is where you can provide your contact information.</p>
+        <div class="contact-grid">
+            <!-- Phone -->
+            <a href="tel:+1234567890" class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+66 12 345 6789</span>
+            </a>
+            
+            <!-- Email -->
+            <a href="@65010312@kmitl.ac.th" class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>natthapak@example.com</span>
+            </a>
+            
+            <!-- GitHub -->
+            <a href="https://github.com/" target="_blank" class="contact-item">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/natthapak.prampring.3" target="_blank" class="contact-item">
+                <i class="fab fa-facebook"></i>
+                <span>Facebook</span>
+            </a>
+            
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/ppoarl/" target="_blank" class="contact-item">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+        </div>
     </section>
-
-    <script src="opal.js/script>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; nprampri | 2025</p>
+        </div>
+    </footer>
+    <script src="opal.js"></script>
 </body>
 </html>
