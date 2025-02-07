@@ -39,7 +39,7 @@ section {
 
 /* About Section */
 #about {
-    background: linear-gradient(135deg, #810a9f, hsl(294, 68%, 73%));
+    background: linear-gradient(135deg, #160675, hsl(256, 81%, 88%));
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -60,7 +60,7 @@ section {
 
 .about-header .name {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
-    color: #4e0249;
+    color: #2ef0e6;
     font-weight: bold;
     margin-top: 1rem;
     margin-left: 40vw;
@@ -338,6 +338,12 @@ footer p {
         gap: 1rem;
     }
     .about-header .name {
-        font-size: 1.5rem; /* ลดขนาดตัวอักษรในหน้าจอเล็ก */
+        font-size: 0.9rem; /* ลดขนาดตัวอักษรในหน้าจอเล็ก */
+    }
+    .profile-img {
+        display: flex;
+        justify-content: center;
+        margin-left: 6vw;
+    
     }
 }
