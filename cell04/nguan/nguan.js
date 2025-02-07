@@ -1,12 +1,14 @@
-document.querySelectorAll('nav a').forEach(anchor => {
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
-        targetSection.scrollIntoView({ behavior: 'smooth' });
+
+        if (targetSection) {
+            e.preventDefault(); // ป้องกันเฉพาะลิงก์ที่เป็น anchor link (#about, #experience)
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
     });
 });
-
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active');
