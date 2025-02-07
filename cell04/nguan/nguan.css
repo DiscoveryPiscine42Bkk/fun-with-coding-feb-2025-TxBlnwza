@@ -90,13 +90,9 @@ section {
 
 /* Section: About Me */
 #about {
-    background: url('https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    padding: 60px 20px;
+    color: #333; /* สีตัวหนังสือ */
 }
 
 .card {
@@ -148,9 +144,9 @@ section {
 
 /* Section: Experience */
 #experience {
-    background: #ddd;
-    padding: 40px 20px;
-    text-align: center;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    padding: 60px 20px;
+    color: #333;
 }
 #experience h2 {
     font-size: 48px; /* ปรับขนาดตัวหนังสือ */
@@ -198,8 +194,8 @@ section {
     background: white;
     border-radius: 10px;
     padding: 15px; /* ลด padding */
-    margin: 20px auto; /* ลดระยะห่าง */
-    max-width: 100%; /* ให้เต็มความกว้าง */
+    margin: 25px auto; /* ลดระยะห่าง */
+    max-width: 90%; /* ให้เต็มความกว้าง */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
@@ -222,10 +218,11 @@ section {
     color: #444;
     line-height: 1.5; /* ลดระยะห่างระหว่างบรรทัด */
 }
+/* ================== Section: Contact ================== */
 #contact {
-    background: #bbb;
+    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
     padding: 60px 20px;
-    text-align: center;
+    color: #333;
 }
 #contact h2 {
     font-size: 48px; /* ปรับขนาดตัวหนังสือ */
@@ -284,6 +281,26 @@ section {
     margin: 0 0 5px 0;
     color: #222;
 }
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 999;
+    margin-top: auto; /* สำหรับการจัดวางให้อยู่ล่างสุด */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
 
 /* ================== Responsive Design (Mobile) ================== */
 @media (max-width: 768px) {
@@ -297,7 +314,7 @@ section {
         width: 100%;
         background: #444;
         position: absolute;
-        top: 60px;
+        top: 50px;
         left: 0;
         padding: 10px 0;
     }
@@ -404,5 +421,8 @@ section {
 
     .contact-details p {
         font-size: 16px; /* ลดขนาดข้อความสำหรับมือถือ */
+    }
+    footer p {
+        font-size: 14px; /* ปรับขนาดตัวหนังสือสำหรับมือถือ */
     }
 }
